@@ -73,7 +73,7 @@ def question(request, this_user):
     }
 
     if this_mbti.order == 13:
-        return redirect('music:result', this_mbti.pk)
+        return redirect('music:end', this_mbti.pk)
     else:
         return render(request, 'music/question.html', context=ctx)
 
@@ -81,6 +81,10 @@ def question(request, this_user):
     #     return render(request, 'music/endstory.html', {'this_user': this_mbti.pk})
     # else:
     #     return render(request, 'music/question.html', context=ctx)
+
+
+def end_story(request, this_user):
+    return render(request, 'music/endstory.html', {'this_user': this_user})
 
 
 def calc_result(request, this_user):
