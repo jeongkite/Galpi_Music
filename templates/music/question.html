@@ -1,0 +1,8 @@
+<h3>{{ question.q_title }}</h3>
+
+{% for answer in answers %}
+    <form action="{% url 'music:question' this_user=this_user %}" method="POST">
+    {% csrf_token %}
+        <button name="choice" value="{{ answer.a_type }}">{{ answer.a_text }}</button>
+    </form>
+{% endfor %}
