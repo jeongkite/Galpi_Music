@@ -29,16 +29,7 @@ def start(request):
 
 def question(request, this_user):
     choice = request.POST['choice']
-
-    if this_user == 0:
-        this_mbti = Mbti(order=1, e_i=0, s_n=0, t_f=0, p_j=0)
-    else:
-        this_mbti = get_object_or_404(Mbti, pk=this_user)
-    # try:
-    #     this_mbti = get_object_or_404(Mbti, pk=this_user)
-    #     print('try 실행')
-    # except:
-    #     this_mbti = Mbti(order=1, e_i=0, s_n=0, t_f=0, p_j=0)
+    this_mbti = get_object_or_404(Mbti, pk=this_user)
 
     question = get_object_or_404(Question, q_number=this_mbti.order)
     answers = question.answer_set.all()
@@ -76,11 +67,6 @@ def question(request, this_user):
         return redirect('music:end', this_mbti.pk)
     else:
         return render(request, 'music/question.html', context=ctx)
-
-    # if this_mbti.order == 13:
-    #     return render(request, 'music/endstory.html', {'this_user': this_mbti.pk})
-    # else:
-    #     return render(request, 'music/question.html', context=ctx)
 
 
 def end_story(request, this_user):
