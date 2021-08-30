@@ -1,0 +1,52 @@
+.undo-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.more-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more__undo {
+  position: absolute;
+  margin: 5%;
+}
+.more__logo {
+  width: 25%;
+}
+
+.more-section h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.15em;
+}
+.more-section h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.more__text {
+  padding: 0 15%;
+  font-family: "RIDIBatang";
+  font-size: 0.87rem;
+  line-height: 1.5rem;
+  text-align: left;
+  color: rgba(43, 39, 38, 0.8);
+}
+.more__text .galpi {
+  font-family: "NanumBarunGothic";
+}
+.mb-5 {
+  margin-bottom: 4%;
+}

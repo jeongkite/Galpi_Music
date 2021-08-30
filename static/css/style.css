@@ -1,0 +1,42 @@
+@import "reset.css";
+@import url("font.css");
+
+@import url("components/button.css");
+@import url("components/question.css");
+@import url("components/share.css");
+
+@import url("pages/main.css");
+@import url("pages/more.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: NanumBarunGothic;
+  color: #2b2726;
+}
+@media not all and (hover: hover) {
+  section {
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  section {
+    width: 500px;
+  }
+}
+
+section {
+  height: 100vh;
+  background-image: url("../img/top_background.svg"),
+    url("../img/bottom_background.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: left top, right bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #2b2726;
+}

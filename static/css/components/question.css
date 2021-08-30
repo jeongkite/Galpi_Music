@@ -1,0 +1,50 @@
+.top_logo-q {
+  width: 12%;
+  margin-top: 10%;
+}
+
+.status {
+  margin: 10% 0;
+}
+
+.q_title {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  font-family: RIDIBatang;
+  margin: 0 15% 4% 15%;
+}
+
+.q-btn {
+  margin-top: 3.5%;
+}
+
+.q_con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.lottie {
+  margin-top: 3%;
+}
+
+/* 
+.lottie {
+  bottom: 5%;
+}
+
+@media (hover: hover) {
+  .lottie {
+    width: 100%;
+    max-width: 500px;
+    bottom: 10%;
+  }
+}
+
+@media not all and (hover: hover) {
+  .lottie {
+    width: 100%;
+    max-width: 500px;
+    bottom: 3%;
+  }
+} */

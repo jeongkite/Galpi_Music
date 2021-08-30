@@ -1,3 +1,29 @@
-<a href="{% url 'music:main' %}">이전</a>
-<h3>Galpi</h3>
-<p>당신의 삶을 갈피하다</p>
+{% extends "music/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="undo-section">    
+    <a class="more__undo" href="{% url 'music:main' %}"><img src="../../static/img/undo.svg" alt="이전으로"></a>
+</div>
+<div class="more-main">
+    <div class="more-section">
+        <img class="more__logo" src="../../static/img/more_logo.svg" alt="logo">
+        
+        <h3>GALPI your life</h3>
+        <h4>삶을 "갈피"하세요</h4>
+    
+        <div class="main__hr"></div>
+    
+    </div>
+        <p class="more__text mb-5"><span class="galpi">GALPI</span>는 인생을 갈무리할 수 있는 시간을 갖도록 돕는 프로젝트입니다.</p>
+        <p class="more__text mb-5">나만의 <죽음 포트폴리오>를 제작하여 소중한 사람과 나눌 수 있는 서비스를 제공합니다.</p>
+        
+        <div class="more__part more__text">기획 | 배정우 김경민</div>
+        <div class="more__part more__text">개발 | 양정연</div>
+        <div class="more__part more__text">디자인 | 최서연</div>
+</div>
+
+
+    
+
+{% endblock %}

@@ -6,6 +6,7 @@ from django.db.models.fields.related import ForeignKey
 
 
 class Mbti(models.Model):
+    # hash_code = models.CharField(max_length=100, blank=True, null=True)
     order = models.IntegerField(default=1, verbose_name="진행도")
     e_i = models.IntegerField(default=0, verbose_name="E/I")
     s_n = models.IntegerField(default=0, verbose_name="S/N")
