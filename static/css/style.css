@@ -7,6 +7,7 @@
 
 @import url("pages/main.css");
 @import url("pages/more.css");
+@import url("pages/end.css");
 
 body {
   display: flex;
@@ -34,6 +35,7 @@ section {
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: left top, right bottom;
+  background-attachment: scroll;
 }
 
 a {

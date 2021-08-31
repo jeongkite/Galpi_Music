@@ -25,10 +25,10 @@
 }
 
 .more-section h3 {
-  margin-top: 15px;
-  font-size: 1.3rem;
+  margin-top: 6px;
+  font-size: 1rem;
   line-height: 1.7rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 .more-section h4 {
   font-size: 1rem;
@@ -39,7 +39,7 @@
 .more__text {
   padding: 0 15%;
   font-family: "RIDIBatang";
-  font-size: 0.87rem;
+  font-size: 0.85rem;
   line-height: 1.5rem;
   text-align: left;
   color: rgba(43, 39, 38, 0.8);
@@ -49,4 +49,14 @@
 }
 .mb-5 {
   margin-bottom: 4%;
+}
+
+.more__part-top {
+  margin-top: 15px;
+}
+
+.more__part {
+  color: rgba(43, 39, 38, 0.6);
+  font-size: 0.72rem;
+  line-height: 1.4rem;
 }
