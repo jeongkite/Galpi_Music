@@ -2,38 +2,50 @@
 {% load static %}
 
 {% block content %}
-<section class="section long">
-    <img class="top_logo-q" src="/static/img/top_logo.svg" alt="top_logo">
-
-    <h5>장례식에 흘러나올</h5>
-    <h4>내 인생의 주제곡은</h4>
-
-    <img src="../../static/img/result/Result_Illust-1.svg" alt="결과 일러스트">
+<section class="section long sec-padding">
+    <div class="res-con">
+        <a href="{% url 'music:main' %}">
+            <img class="top_logo-q" src="/static/img/top_logo.svg" alt="top_logo">
+        </a>
     
-    <h3>{{ result.song }}</h3>
-    <h4>{{ result.singer }}</h4>
-    <img src="../../static/img/result/playlist.svg" alt="플레이어 ui">
+        <h5 class="result_ridi r__title1 ">장례식에 흘러나올</h5>
+        <h4 class="result_ridi r__title2 ">내 인생의 주제곡은</h4>
     
-    <h4>{{ result.close_line }}</h4>
-
-
-    <ul>
-        {% for text in texts %}
-            <li>
-                {{ text.content }}
-            </li>
-        {% endfor %}
-    </ul>
-
-    <hr>
-    <h4>인생의 주제곡으로 살펴본 당신의 속마음</h4>
-    <h5>{{ result.heart }}</h5>
-
-    <hr>
-    <h4>당신과 영혼의 결이 같은 사람</h4>
-    <h5>{{ result.partner.song }}</h5>
-    <h6>{{ result.partner.singer }}</h6>
-    <h6>{{ result.partner_text }}</h6>
-
+        <img class="r__main-img" src="../../static/img/result/Result_Illust-{{ result.pk }}.svg" alt="결과 일러스트">
+        
+        <h3 class="result_ridi r__title2">{{ result.song }}</h3>
+        <h4 class="r__singer ">{{ result.singer }}</h4>
+        <img src="../../static/img/result/playlist_another.svg" alt="플레이어 ui">
+        
+        <div class="r__close">
+            <div class="r__close-fac"></div>
+            <h4 class="result_ridi r__close-text">{{ result.close_line|linebreaks }}</h4>
+            <div class="r__close-fac"></div>
+        </div>
+    
+        <h5 class="result_ridi r__desc">{{ result.description|linebreaks }}</h5>
+    
+    
+        <ul class="r__text-ul">
+            {% for text in texts %}
+                <li class="r__text-li">
+                    {{ text.content|linebreaks }}
+                </li>
+            {% endfor %}
+        </ul>
+    
+        <hr>
+        <h4>인생의 주제곡으로 살펴본 당신의 속마음</h4>
+        <h5>{{ result.heart|linebreaks }}</h5>
+    
+        <hr>
+        <h4>당신과 영혼의 결이 같은 사람</h4>
+        <img src="../../static/img/result/Result_Illust-{{ result.partner.pk }}.svg" alt="파트너 일러스트">
+        <h5>{{ result.partner.song }}</h5>
+        <h6>{{ result.partner.singer }}</h6>
+        <h6>{{ result.partner_text|linebreaks }}</h6>
+    
+        <a class="button" href="{% url 'music:main' %}">테스트 다시하기</a>
+    </div>
 </section>
 {% endblock %}

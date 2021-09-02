@@ -5,6 +5,7 @@
   background-color: white;
   width: 70%;
   padding: 4% 15px;
+  box-sizing: border-box;
 }
 
 .button:active {

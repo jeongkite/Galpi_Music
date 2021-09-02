@@ -19,10 +19,10 @@
 </div>
 
 <div class="q_con">
-    <h3 class="q_title">{{ question.q_title }}</h3>
+    <h3 class="q_title">{{ question.q_title|linebreaks }}</h3>
     
     {% for answer in answers %}
-        <form action="{% url 'music:question' this_user=this_user %}" method="POST">
+        <form action="{% url 'music:question' code=code %}" method="POST">
         {% csrf_token %}
             <button class="button q-btn" name="choice" value="{{ answer.a_type }}">{{ answer.a_text }}</button>
         </form>
