@@ -1,0 +1,83 @@
+@keyframes slidein {
+  from {
+    opacity: 0%;
+    left: 100%;
+  }
+
+  to {
+    opacity: 100%;
+    left: 0%;
+  }
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0%;
+    top: 50px;
+  }
+  to {
+    opacity: 100%;
+    top: 0px;
+  }
+}
+
+@keyframes fadedown {
+  from {
+    opacity: 0%;
+    top: -50px;
+  }
+  to {
+    opacity: 100%;
+    top: 0px;
+  }
+}
+
+@keyframes slidefromright {
+  from {
+    opacity: 0%;
+    left: -200px;
+  }
+
+  to {
+    opacity: 100%;
+    left: 0px;
+  }
+}
+
+.fadeup-ani {
+  animation-name: fadeup;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transition-timing-function: ease-in-out;
+}
+.endstory-ani {
+  animation-name: fadeup;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transition-timing-function: ease-in-out;
+}
+.fadedown-ani {
+  animation-name: fadedown;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transition-timing-function: ease-in-out;
+}
+
+.question-ani {
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transition-timing-function: ease-in-out;
+}
+
+.sfr-ani {
+  animation-name: slidefromright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transition-timing-function: ease-in-out;
+}

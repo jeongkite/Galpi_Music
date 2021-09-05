@@ -4,6 +4,7 @@
 @import url("components/button.css");
 @import url("components/question.css");
 @import url("components/share.css");
+@import url("components/animation.css");
 
 @import url("pages/main.css");
 @import url("pages/more.css");
@@ -32,10 +33,11 @@ body {
 
 section {
   height: 100vh;
+  max-width: 500px;
   background-image: url("../img/top_background.svg"),
     url("../img/bottom_background.svg");
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 46%, 40%;
   background-position: left top, right bottom;
   background-attachment: scroll;
   background-color: white;

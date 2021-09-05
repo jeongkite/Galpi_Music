@@ -21,6 +21,7 @@
 
 .r__title2 {
   font-size: 1.3rem;
+  line-height: 1.6rem;
 }
 .r__singer {
   margin-top: 3%;
@@ -48,8 +49,9 @@
 }
 
 .r__text-ul {
-  list-style: inside;
+  list-style: disc;
   padding: 7%;
+  padding-left: 11.5%;
   border: 1px solid rgba(43, 39, 38, 0.3);
   box-sizing: border-box;
 }
@@ -106,6 +108,7 @@
 }
 .r__h-text {
   line-height: 1.5rem;
+  color: rgba(43, 39, 38, 0.7);
 }
 
 .r-btn {
@@ -114,6 +117,10 @@
   padding-bottom: 5%;
   margin-top: 10%;
   margin-bottom: 5%;
+}
+.rf-btn {
+  margin-top: 0%;
+  margin-bottom: 10%;
 }
 
 .banner {

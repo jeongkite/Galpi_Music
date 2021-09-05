@@ -3,25 +3,24 @@
 
 {% block content %}
 <section class="section">
-<div class="main_section">
+<div class="main_section ">
 	<img class="top_logo" src="/static/img/top_logo.svg" alt="top_logo">
-	<div class="main-main">
-
-	</div>
-	<img class="main_logo" src="/static/img/main_logo.svg" alt="main_logo">
 	
-	<h2 class="main__title1">장례식에 흘러나올</h2>
-	<h2 class="main__title2">내 인생의 주제곡은?</h2>
-
-	<div class="main__hr"></div>
-	<h5 class="main__text">Galpi.<br>당신의 삶을 갈피하다</h5>
+	<img class="main_logo fadedown-ani" src="/static/img/main_logo.svg" alt="main_logo">
 	
-	<a class="main__more" href="{% url 'music:more' %}">더 알아보기 ▶︎</a>
-	<button class="main-btn button"><a class="main__button" href="{% url 'music:start' %}">시작하기</a></button>
-	<button class="main-btn button"><a class="main__button" href="{% url 'music:more' %}">갈피 프로젝트 ▶︎</a></button>
+	<h2 class="main__title1 fadeup-ani">장례식에 흘러나올</h2>
+	<h2 class="main__title2 fadeup-ani">내 인생의 주제곡은?</h2>
 
-	<a class="main__copy" href="#" onclick="clip(); return false;">주소 복사하기</a>
-	<div class="main_share">
+	<div class="main__hr fadeup-ani"></div>
+
+	<h5 class="main__text fadeup-ani">Galpi.<br>당신의 삶을 갈피하다</h5>
+	
+	<a class="main__more fadeup-ani" href="{% url 'music:more' %}">더 알아보기 ▶︎</a>
+	<button class="main-btn button fadeup-ani"><a class="main__button" href="{% url 'music:start' %}">시작하기</a></button>
+	<button class="main-btn button fadeup-ani"><a class="main__button" href="{% url 'music:more' %}">갈피 프로젝트 ▶︎</a></button>
+
+	<a class="main__copy fadeup-ani" href="#" onclick="clip(); return false;">주소 복사하기</a>
+	<div class="main_share fadeup-ani">
 		<a id="btnKakao" class="link-icon kakao" href="javascript:shareKakao();">
 			<img src="../../static/img/share/sicon_kakao.svg" alt="카카오">
 		</a>    

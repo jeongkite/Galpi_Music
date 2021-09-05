@@ -106,8 +106,10 @@ def calc_result(request, code):
         x = randint(0, 1)
         if x == 1:
             result += "e"
+            this_mbti.e_i += 1
         else:
             result += "i"
+            this_mbti.e_i -= 1
     else:
         result += "i"
 
@@ -117,8 +119,10 @@ def calc_result(request, code):
         x = randint(0, 1)
         if x == 1:
             result += "s"
+            this_mbti.s_n += 1
         else:
             result += "n"
+            this_mbti.s_n -= 1
     else:
         result += "n"
 
@@ -128,8 +132,10 @@ def calc_result(request, code):
         x = randint(0, 1)
         if x == 1:
             result += "t"
+            this_mbti.t_f += 1
         else:
             result += "f"
+            this_mbti.t_f -= 1
     else:
         result += "f"
 
@@ -139,10 +145,14 @@ def calc_result(request, code):
         x = randint(0, 1)
         if x == 1:
             result += "p"
+            this_mbti.p_j += 1
         else:
             result += "j"
+            this_mbti.p_j -= 1
     else:
         result += "j"
+
+    this_mbti.save()
 
     print(result)
     rslt_content = get_object_or_404(Result, mbti=result)

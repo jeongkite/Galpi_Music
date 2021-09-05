@@ -3,7 +3,7 @@
 
 {% block content %}
 <section class="section long sec-padding">
-    <div class="res-con">
+    <div class="res-con fadeup-ani">
         <a href="{% url 'music:main' %}">
             <img class="top_logo-q" src="/static/img/top_logo.svg" alt="top_logo">
         </a>
@@ -13,7 +13,7 @@
     
         <img class="r__main-img" src="../../static/img/result/Result_Illust-{{ result.pk }}.svg" alt="결과 일러스트">
         
-        <h3 class="result_ridi r__title2">{{ result.song }}</h3>
+        <h3 class="result_ridi r__title2">{{ result.song|linebreaks }}</h3>
         <h4 class="r__singer ">{{ result.singer }}</h4>
         <img src="../../static/img/result/playlist_another.svg" alt="플레이어 ui">
         
@@ -53,6 +53,9 @@
         <div class="banner"></div>
 
         <button class="button r-btn">
+            <a href="{% url 'music:main' %}">낯선 목소리 정체 밝히기</a>
+        </button>
+        <button class="button r-btn rf-btn">
             <a href="{% url 'music:main' %}">테스트 다시하기</a>
         </button>
 
