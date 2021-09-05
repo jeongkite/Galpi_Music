@@ -30,6 +30,11 @@ body {
     width: 500px;
   }
 }
+@media (min-width: 500px) {
+  section {
+    width: 500px;
+  }
+}
 
 section {
   height: 100vh;

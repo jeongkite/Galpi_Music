@@ -1,8 +1,3 @@
-.undo-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .more-main {
   display: flex;
   height: 100%;
@@ -19,6 +14,13 @@
 .more__undo {
   position: absolute;
   margin: 5%;
+}
+@media (hover: hover) {
+  .more__undo {
+    position: absolute;
+    right: 27%;
+    margin-top: 3%;
+  }
 }
 .more__logo {
   width: 25%;
