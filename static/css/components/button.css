@@ -1,0 +1,24 @@
+.button {
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(43, 39, 38, 0.7);
+  background-color: white;
+  width: 70%;
+  padding: 4% 15px;
+  box-sizing: border-box;
+}
+
+.button:active {
+  background: #2b2726;
+  color: white;
+}
+
+.status {
+  top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status img {
+  margin: 2px;
+}

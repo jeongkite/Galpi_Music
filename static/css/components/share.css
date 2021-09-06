@@ -1,0 +1,13 @@
+.main__copy {
+  margin-top: 5%;
+  font-size: 0.9rem;
+  color: rgba(43, 39, 38, 0.3);
+}
+
+.main_share {
+  margin-top: 3%;
+}
+
+.main_share .link-icon {
+  margin-right: 10px;
+}

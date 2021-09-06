@@ -1,0 +1,131 @@
+.res-con {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 15%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.result_ridi {
+  font-family: RIDIBatang;
+}
+.r__title1 {
+  margin-top: 20%;
+  margin-bottom: 2.5%;
+  font-size: 1.05rem;
+}
+
+.r__main-img {
+  margin: 10% 0 8% 0;
+}
+
+.r__title2 {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+.r__singer {
+  margin-top: 3%;
+  margin-bottom: 8%;
+  font-size: 0.9rem;
+  color: rgba(43, 39, 38, 0.3);
+}
+
+.r__close {
+  margin: 15% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.r__close-text {
+  padding: 0 15px;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+}
+
+.r__desc {
+  margin-bottom: 15%;
+  font-size: 0.83rem;
+  line-height: 1.5rem;
+  color: rgba(43, 39, 38, 0.7);
+}
+
+.r__text-ul {
+  list-style: disc;
+  padding: 7%;
+  padding-left: 11.5%;
+  border: 1px solid rgba(43, 39, 38, 0.3);
+  box-sizing: border-box;
+}
+.r__text-li {
+  text-align: left;
+  margin-bottom: 3%;
+  color: rgba(43, 39, 38, 0.7);
+  font-size: 0.83rem;
+  line-height: 1.5rem;
+}
+.r__text-li:last-child {
+  margin-bottom: 0;
+}
+
+.r__heart {
+  margin-top: 8%;
+  padding: 7%;
+  border: 1px solid rgba(43, 39, 38, 0.3);
+  box-sizing: border-box;
+}
+.r__h-title1 {
+  font-size: 1rem;
+  margin-bottom: 3%;
+}
+.r__h-title2 {
+  font-size: 1.1rem;
+}
+.r__heart hr {
+  color: rgba(43, 39, 38, 0.3);
+  margin: 5% 0;
+}
+.r__h-con {
+  font-size: 0.83rem;
+  line-height: 1.5rem;
+  color: rgba(43, 39, 38, 0.7);
+}
+
+.r__partner img {
+  width: 60%;
+}
+.r__partner h5 {
+  font-family: RIDIBatang;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-top: 3%;
+}
+.r__partner h6 {
+  font-size: 0.83rem;
+}
+.r__h-singer {
+  color: rgba(43, 39, 38, 0.3);
+  margin-top: 1%;
+  margin-bottom: 6%;
+}
+.r__h-text {
+  line-height: 1.5rem;
+  color: rgba(43, 39, 38, 0.7);
+}
+
+.r-btn {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.rf-btn {
+  margin-top: 0%;
+  margin-bottom: 10%;
+}
+
+.banner {
+  margin-top: 10%;
+  width: 100%;
+  height: 200px;
+  background: rgb(196, 196, 196);
+}

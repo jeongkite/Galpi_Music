@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.main, name='main'),
     path('more/', views.more, name='more'),
     path('start/', views.start, name='start'),
-    path('question/<int:this_user>/', views.question, name='question'),
-    path('result/<int:this_user>/', views.calc_result, name='result'),
+    path('question/<str:code>/', views.question, name='question'),
+    path('end/<str:code>/', views.end_story, name='end'),
+    path('result/<str:code>/', views.calc_result, name='result'),
 ]

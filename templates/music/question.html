@@ -1,8 +1,36 @@
-<h3>{{ question.q_title }}</h3>
+{% extends "music/base.html" %}
+{% load static %}
 
-{% for answer in answers %}
-    <form action="{% url 'music:question' this_user=this_user %}" method="POST">
-    {% csrf_token %}
-        <button name="choice" value="{{ answer.a_type }}">{{ answer.a_text }}</button>
-    </form>
-{% endfor %}
+{% block content %}
+<section class="section ">
+
+<img class="top_logo-q" src="/static/img/top_logo.svg" alt="top_logo">
+
+<div class="status">
+    {% for b in black %}
+        <img src="{% static 'img/question/black_circle.svg' %}" alt="">    
+    {% endfor %}
+
+    <img src="{% static 'img/question/comma.svg' %}" alt="">    
+
+    {% for g in gray %}
+        <img src="{% static 'img/question/gray_circle.svg' %}" alt="">    
+    {% endfor %}
+</div>
+
+<div class="q_con question-ani">
+    <h3 class="q_title">{{ question.q_title|linebreaks }}</h3>
+    
+    {% for answer in answers %}
+        <form action="{% url 'music:question' code=code %}" method="POST">
+        {% csrf_token %}
+            <button class="button q-btn" name="choice" value="{{ answer.a_type }}">{{ answer.a_text }}</button>
+        </form>
+    {% endfor %}
+    <div class="lottie" id="lottie_{{ question.q_number }}"></div>
+    
+</div>
+
+</section>
+{% endblock %}
+
