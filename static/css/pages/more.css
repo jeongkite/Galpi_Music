@@ -15,7 +15,7 @@
   position: absolute;
   margin: 5%;
 }
-@media (hover: hover) {
+@media (min-width: 500px) {
   .more__undo {
     position: absolute;
     right: 27%;
