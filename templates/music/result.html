@@ -52,12 +52,8 @@
     
         <div class="banner"></div>
 
-        <button class="button r-btn">
-            <a href="{% url 'music:main' %}">낯선 목소리 정체 밝히기</a>
-        </button>
-        <button class="button r-btn rf-btn">
-            <a href="{% url 'music:main' %}">테스트 다시하기</a>
-        </button>
+        <button class=" r-btn button " onclick = "location.href = '#' ">낯선 목소리 정체 밝히기</button>
+        <button class=" r-btn rf-btn button " onclick = "location.href = '{% url "music:main" %}' ">테스트 다시하기</button>
 
         <a class="main__copy r-copy" href="#" onclick="clip(); return false;">주소 복사하기</a>
         <div class="main_share">
