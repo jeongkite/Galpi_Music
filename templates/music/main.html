@@ -16,8 +16,8 @@
 	<h5 class="main__text fadeup-ani">Galpi.<br>당신의 삶을 갈피하다</h5>
 	
 	<a class="main__more fadeup-ani" href="{% url 'music:more' %}">더 알아보기 ▶︎</a>
-	<button class="main-btn button fadeup-ani"><a class="main__button" href="{% url 'music:start' %}">시작하기</a></button>
-	<button class="main-btn button fadeup-ani"><a class="main__button" href="{% url 'music:more' %}">갈피 프로젝트 ▶︎</a></button>
+	<button class="main-btn button fadeup-ani " onclick = "location.href = '{% url "music:start" %}' ">시작하기</button>
+	<button class="main-btn button fadeup-ani " onclick = "location.href = '#' ">갈피 프로젝트 ▶︎</button>
 
 	<a class="main__copy fadeup-ani" href="#" onclick="clip(); return false;">주소 복사하기</a>
 	<div class="main_share fadeup-ani">
