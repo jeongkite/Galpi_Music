@@ -130,15 +130,10 @@ function showSlides() {
     setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
 
-import Kakao from '@/common/plugins/kakao.min'
-
-if (!Kakao.isInitialized()) {
-	Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859')
-}
-
-// createDefaultButton 함수 호출
 function sendLinkCustom() {
-	Kakao.init("fb1e3cb2e854d47e48e2040c2e1ef859");
+	if (!Kakao.isInitialized()) {
+		Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859')
+	}
 	Kakao.Link.sendCustom({
 		templateId: 61807
 	});
