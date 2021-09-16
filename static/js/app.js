@@ -18,12 +18,12 @@ function share() {
 
 function shareTwitter() {
     var sendText = "갈피 : 장례식에 흘러나올 내 인생의 주제곡은?"; // 전달할 텍스트
-    var sendUrl = "galpi.me/"; // 전달할 URL
+    var sendUrl = window.document.location.href; // 전달할 URL
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 function shareFacebook() {
-    var sendUrl = "galpi.me/"; // 전달할 URL
+    var sendUrl = window.document.location.href; // 전달할 URL
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
@@ -113,3 +113,43 @@ var q12 = bodymovin.loadAnimation({
 	autoplay: true,
 	path: '/static/js/animation/12.json'
 });
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+
+import Kakao from '@/common/plugins/kakao.min'
+
+if (!Kakao.isInitialized()) {
+	Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859')
+}
+
+// createDefaultButton 함수 호출
+function sendLinkCustom() {
+	Kakao.init("fb1e3cb2e854d47e48e2040c2e1ef859");
+	Kakao.Link.sendCustom({
+		templateId: 61807
+	});
+}
+//<![CDATA[ 
+// // 사용할 앱의 JavaScript 키를 설정해 주세요. 
+Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859'); 
+// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다. 
+Kakao.Link.createScrapButton({ 
+	container: '#kakao-link-btn',
+	requestUrl: 'galpi.me', 
+	templateId : 61807
+}); 
+//]]>

@@ -68,6 +68,7 @@
 
 .r__heart {
   margin-top: 8%;
+  margin-bottom: 10%;
   padding: 7%;
   border: 1px solid rgba(43, 39, 38, 0.3);
   box-sizing: border-box;
@@ -128,4 +129,41 @@
   width: 100%;
   height: 200px;
   background: rgb(196, 196, 196);
+}
+
+.slideshow-container img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
