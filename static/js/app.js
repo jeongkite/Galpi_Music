@@ -143,13 +143,3 @@ function sendLinkCustom() {
 		templateId: 61807
 	});
 }
-//<![CDATA[ 
-// // 사용할 앱의 JavaScript 키를 설정해 주세요. 
-Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859'); 
-// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다. 
-Kakao.Link.createScrapButton({ 
-	container: '#kakao-link-btn',
-	requestUrl: 'galpi.me', 
-	templateId : 61807
-}); 
-//]]>
