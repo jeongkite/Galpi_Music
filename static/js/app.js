@@ -139,7 +139,7 @@ function sendLinkCustom() {
 	});
 }
 
-function kakaoResultShare(description, imgNum) {
+function kakaoResultShare(song, singer, imgNum) {
 	if (!Kakao.isInitialized()) {
 		Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859')
 	}
@@ -147,7 +147,7 @@ function kakaoResultShare(description, imgNum) {
 		objectType: 'feed',
 		content: {
 			title: "장례식에 흘러나올 '인생의 주제곡'은?",
-			description,
+			description: song + ' : ' + singer,
 			imageUrl: 'https://galpi.me/static/img/kakaoshare/kakaoshare_' + imgNum +'.png',
 			link: {
 				mobileWebUrl: window.document.location.href,
