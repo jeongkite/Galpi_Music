@@ -148,7 +148,7 @@ function kakaoResultShare(description, imgNum) {
 		content: {
 			title: "장례식에 흘러나올 '인생의 주제곡'은?",
 			description,
-			imageUrl: 'https://galpi.me/static/img/result/Result_Illust-' + imgNum +'.svg',
+			imageUrl: 'https://galpi.me/static/img/kakaoshare/kakaoshare_' + imgNum +'.png',
 			link: {
 				mobileWebUrl: window.document.location.href,
 				webUrl: window.document.location.href,
