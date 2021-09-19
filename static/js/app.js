@@ -138,3 +138,22 @@ function sendLinkCustom() {
 		templateId: 61807
 	});
 }
+
+function kakaoResultShare(description, imgNum) {
+	Kakao.Link.sendDefault({
+		objectType: 'feed',
+		content: {
+			title: "장례식에 흘러나올 '인생의 주제곡'은?",
+			description,
+			imageUrl: 'https://galpi.me/static/img/result/Result_Illust-' + imgNum +'.svg',
+			link: {
+				mobileWebUrl: 'https://galpi.me/',
+				webUrl: 'https://galpi.me/',
+			},
+		},
+		buttons: [{
+			title: '나도 알아보기', link: { mobileWebUrl: "https://galpi.me/", webUrl: "https://galpi.me/", },
+		},
+		],
+	})
+}
