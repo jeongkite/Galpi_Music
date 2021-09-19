@@ -1,4 +1,4 @@
-function clip(){
+function clip() {
 	var url = '';
 	var textarea = document.createElement("textarea");
 	document.body.appendChild(textarea);
@@ -9,33 +9,33 @@ function clip(){
 	document.body.removeChild(textarea);
 	alert("URL이 복사되었습니다.")
 }
-function share() { 
-    var url = encodeURI(encodeURIComponent(myform.url.value)); 
-    var title = encodeURI(myform.title.value); 
-    var shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title; 
-    document.location = shareURL; 
+function share() {
+	var url = encodeURI(encodeURIComponent(myform.url.value));
+	var title = encodeURI(myform.title.value);
+	var shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title;
+	document.location = shareURL;
 }
 
 function shareTwitter() {
-    var sendText = "갈피 : 장례식에 흘러나올 내 인생의 주제곡은?"; // 전달할 텍스트
-    var sendUrl = window.document.location.href; // 전달할 URL
-    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+	var sendText = "갈피 : 장례식에 흘러나올 내 인생의 주제곡은?"; // 전달할 텍스트
+	var sendUrl = window.document.location.href; // 전달할 URL
+	window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 function shareFacebook() {
-    var sendUrl = window.document.location.href; // 전달할 URL
-    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+	var sendUrl = window.document.location.href; // 전달할 URL
+	window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
 // lottie animation
 
 var q1 = bodymovin.loadAnimation({
-    container: document.getElementById('lottie_1'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: '/static/js/animation/01.json'
-  });
+	container: document.getElementById('lottie_1'),
+	renderer: 'svg',
+	loop: false,
+	autoplay: true,
+	path: '/static/js/animation/01.json'
+});
 var q2 = bodymovin.loadAnimation({
 	container: document.getElementById('lottie_2'),
 	renderer: 'svg',
@@ -51,12 +51,12 @@ var q3 = bodymovin.loadAnimation({
 	path: '/static/js/animation/03.json'
 });
 var q4 = bodymovin.loadAnimation({
-    container: document.getElementById('lottie_4'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: '/static/js/animation/04.json'
-  });
+	container: document.getElementById('lottie_4'),
+	renderer: 'svg',
+	loop: false,
+	autoplay: true,
+	path: '/static/js/animation/04.json'
+});
 var q5 = bodymovin.loadAnimation({
 	container: document.getElementById('lottie_5'),
 	renderer: 'svg',
@@ -79,12 +79,12 @@ var q7 = bodymovin.loadAnimation({
 	path: '/static/js/animation/07.json'
 });
 var q8 = bodymovin.loadAnimation({
-    container: document.getElementById('lottie_8'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: '/static/js/animation/08.json'
-  });
+	container: document.getElementById('lottie_8'),
+	renderer: 'svg',
+	loop: false,
+	autoplay: true,
+	path: '/static/js/animation/08.json'
+});
 var q9 = bodymovin.loadAnimation({
 	container: document.getElementById('lottie_9'),
 	renderer: 'svg',
@@ -118,16 +118,16 @@ var slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3500); // Change image every 2 seconds
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	slideIndex++;
+	if (slideIndex > slides.length) { slideIndex = 1 }
+
+	slides[slideIndex - 1].style.display = "block";
+	setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
 
 function sendLinkCustom() {
@@ -146,9 +146,9 @@ function kakaoResultShare(song, singer, imgNum) {
 	Kakao.Link.sendDefault({
 		objectType: 'feed',
 		content: {
-			title: "장례식에 흘러나올 '인생의 주제곡'은?",
+			title: "장례식에 흘러나올 '내 인생의 주제곡'은?",
 			description: song + ' : ' + singer,
-			imageUrl: 'https://galpi.me/static/img/kakaoshare/kakaoshare_' + imgNum +'.png',
+			imageUrl: 'https://galpi.me/static/img/kakaoshare/kakaoshare_' + imgNum + '.png',
 			link: {
 				mobileWebUrl: window.document.location.href,
 				webUrl: window.document.location.href,
