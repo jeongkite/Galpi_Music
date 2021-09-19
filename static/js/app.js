@@ -140,6 +140,9 @@ function sendLinkCustom() {
 }
 
 function kakaoResultShare(description, imgNum) {
+	if (!Kakao.isInitialized()) {
+		Kakao.init('fb1e3cb2e854d47e48e2040c2e1ef859')
+	}
 	Kakao.Link.sendDefault({
 		objectType: 'feed',
 		content: {
@@ -147,12 +150,12 @@ function kakaoResultShare(description, imgNum) {
 			description,
 			imageUrl: 'https://galpi.me/static/img/result/Result_Illust-' + imgNum +'.svg',
 			link: {
-				mobileWebUrl: 'https://galpi.me/',
-				webUrl: 'https://galpi.me/',
+				mobileWebUrl: window.document.location.href,
+				webUrl: window.document.location.href,
 			},
 		},
 		buttons: [{
-			title: '나도 알아보기', link: { mobileWebUrl: "https://galpi.me/", webUrl: "https://galpi.me/", },
+			title: '나도 알아보기', link: { mobileWebUrl: window.document.location.href, webUrl: window.document.location.href, },
 		},
 		],
 	})
