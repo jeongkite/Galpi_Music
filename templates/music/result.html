@@ -1,46 +1,52 @@
 {% extends "music/base.html" %}
 {% load static %}
 
+{% block head %}
+<meta property="og:title" content="장례식에 흘러나올 내 인생의 주제곡은?" />
+<meta property="og:description" content="당신의 삶을 갈피하다" />
+<meta property="og:image" content="https://galpi.me/static/img/result/Result_Illust-{{ result.pk }}.svg" />
+{% endblock %}
+
 {% block content %}
 <section class="section long sec-padding">
     <div class="res-con fadeup-ani">
         <a href="{% url 'music:main' %}">
             <img class="top_logo-q" src="/static/img/top_logo.svg" alt="top_logo">
         </a>
-    
+
         <h5 class="result_ridi r__title1 ">장례식에 흘러나올</h5>
         <h4 class="result_ridi r__title2 ">내 인생의 주제곡은</h4>
-    
+
         <img class="r__main-img" src="../../static/img/result/Result_Illust-{{ result.pk }}.svg" alt="결과 일러스트">
-        
+
         <h3 class="result_ridi r__title2">{{ result.song|linebreaks }}</h3>
         <h4 class="r__singer ">{{ result.singer }}</h4>
         <img src="../../static/img/result/playlist_another.svg" alt="플레이어 ui">
-        
+
         <div class="r__close">
             <img class="r__close-fac" src="../../static/img/result/quote_left.svg" alt="">
             <h4 class="result_ridi r__close-text">{{ result.close_line|linebreaks }}</h4>
             <img class="r__close-fac" src="../../static/img/result/quote_right.svg" alt="">
         </div>
-    
+
         <h5 class="result_ridi r__desc">{{ result.description|linebreaks }}</h5>
-    
-    
+
+
         <ul class="r__text-ul">
             {% for text in texts %}
-                <li class="r__text-li">
-                    {{ text.content }}
-                </li>
+            <li class="r__text-li">
+                {{ text.content }}
+            </li>
             {% endfor %}
         </ul>
-    
+
         <div class="r__heart">
             <h3 class="result_ridi r__h-title1">인생의 주제곡으로 살펴본</h3>
             <h4 class="result_ridi r__h-title2">당신의 속마음</h4>
             <hr>
             <h5 class="r__h-con">{{ result.heart|linebreaks }}</h5>
         </div>
-    
+
         <div class="r__heart r__partner">
             <h4 class="result_ridi r__h-title2">당신과 영혼의 결이 같은 사람</h4>
             <hr>
@@ -49,42 +55,43 @@
             <h6 class="r__h-singer">{{ result.partner.singer }}</h6>
             <h6 class="r__h-text">{{ result.partner_text|linebreaks }}</h6>
         </div>
-    
+
         <div class="slideshow-container">
             <div class="mySlides fade" onclick="location.href='https://tumblbug.com/galpi_me';">
-              <img src="../../static/img/result/banner_1.png" style="width:100%">
+                <img src="../../static/img/result/banner_1.png" style="width:100%">
             </div>
-            
+
             <div class="mySlides fade" onclick="location.href='https://tumblbug.com/galpi_me';">
-              <img src="../../static/img/result/banner_2.png" style="width:100%">
+                <img src="../../static/img/result/banner_2.png" style="width:100%">
             </div>
-            
+
             <div class="mySlides fade" onclick="location.href='https://tumblbug.com/galpi_me';">
-              <img src="../../static/img/result/banner_3.png" style="width:100%">
+                <img src="../../static/img/result/banner_3.png" style="width:100%">
             </div>
         </div>
 
-        <button class=" r-btn button " onclick = "location.href = 'https://tumblbug.com/galpi_me' ">낯선 목소리 정체 밝히기</button>
-        <button class=" r-btn rf-btn button " onclick = "location.href = '{% url "music:main" %}' ">테스트 다시하기</button>
+        <button class=" r-btn button " onclick="location.href = 'https://tumblbug.com/galpi_me' ">낯선 목소리 정체 밝히기</button>
+        <button class=" r-btn rf-btn button " onclick="location.href = '{% url " music:main" %}' ">테스트 다시하기</button>
 
-        <a class="main__copy r-copy" href="#" onclick="clip(); return false;">주소 복사하기</a>
-        <div class="main_share">
-            <a id="btnKakao" class="link-icon kakao" href="#" onclick="kakaoResultShare('{{ result.song }}', '{{ result.singer }}', '{{ result.pk }}'); return false;">
-                <img src="../../static/img/share/sicon_kakao.svg" id="kakao-link-btn" alt="카카오">
-            </a>   
-            <a id="btnTwitter" class="link-icon twitter" href="#" onclick="shareTwitter(); return false;">
-                <img src="../../static/img/share/sicon_twitter.svg" alt="트위터">
-            </a>
-            <a id="btnFacebook" class="link-icon facebook"  href="#" onclick="shareFacebook(); return false;">
-                <img src="../../static/img/share/sicon_facebook.svg" alt="페이스북">
-            </a>
-            <span>
-                <script type="text/javascript" src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"></script>
-                <script type="text/javascript">
-                new ShareNaver.makeButton({"type": "a" , "title":"갈피 음악테스트"});
-                </script>
-            </span>
-        </div>
+        <a class=" main__copy r-copy" href="#" onclick="clip(); return false;">주소 복사하기</a>
+            <div class="main_share">
+                <a id="btnKakao" class="link-icon kakao" href="#"
+                    onclick="kakaoResultShare('{{ result.song }}', '{{ result.singer }}', '{{ result.pk }}'); return false;">
+                    <img src="../../static/img/share/sicon_kakao.svg" id="kakao-link-btn" alt="카카오">
+                </a>
+                <a id="btnTwitter" class="link-icon twitter" href="#" onclick="shareTwitter(); return false;">
+                    <img src="../../static/img/share/sicon_twitter.svg" alt="트위터">
+                </a>
+                <a id="btnFacebook" class="link-icon facebook" href="#" onclick="shareFacebook(); return false;">
+                    <img src="../../static/img/share/sicon_facebook.svg" alt="페이스북">
+                </a>
+                <span>
+                    <script type="text/javascript" src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"></script>
+                    <script type="text/javascript">
+                        new ShareNaver.makeButton({ "type": "a", "title": "갈피 음악테스트" });
+                    </script>
+                </span>
+            </div>
     </div>
 </section>
 {% endblock %}

@@ -19,5 +19,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('rkfabadminvlwlr/', admin.site.urls),
-    path('', include('music.urls')),
+    path('', include('music.urls', namespace="music")),
 ]
