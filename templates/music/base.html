@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,15 @@
     {% block head %}
     {% endblock %}
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    {% block head %}
+    {% endblock %}
+
 <body>
-    
-        {% block content %}
-        {% endblock %}
+
+    {% block content %}
+    {% endblock %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
     <script src="/static/js/app.js"></script>
 </body>
+
 </html>
