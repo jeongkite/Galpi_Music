@@ -1,6 +1,12 @@
 {% extends "music/base.html" %}
 {% load static %}
 
+{% block head %}
+<meta property="og:title" content="{{result.song}} : {{result.singer}}" />
+<meta property="og:description" content="Galpi : 당신의 삶을 갈피하다" />
+<meta property="og:image" content="https://galpi.me/static/img/result/Result_Illust-{{ result.pk }}.svg" />
+{% endblock %}
+
 {% block content %}
 <section class="section long sec-padding">
     <div class="res-con fadeup-ani">
