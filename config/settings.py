@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a6q=ogb%%g*8ya34*%*y2d=)pn8tz3t@@iyflv_pcnz+cxzd2_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False    # 배포 직전 False로 바꾸기 : 노란 페이지 x
+DEBUG = True    # 배포 직전 False로 바꾸기 : 노란 페이지 x
 
-ALLOWED_HOSTS = ['galpi.me']  # 배포 직전 '*' : 모든 접근 허용
+ALLOWED_HOSTS = ['*']  # 배포 직전 '*' : 모든 접근 허용
 
 
 # Application definition
