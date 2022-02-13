@@ -4,7 +4,7 @@ Galpi_Music
 2021년 창업동아리 활동을 하며 진행했던 갈피 프로젝트 중 하나.   
 쉽게 나누기 힘든 주제인 죽음을 좀 더 사려깊게 주변 사람들에게 전달하기 위한 서비스.   
 
-[텀블벅](https://tumblbug.com/galpi_me, "tumblbug link")에서 후원을 받아 진행했다.   
+[텀블벅](https://tumblbug.com/galpi_me)에서 후원을 받아 진행했다.   
 
 galpi_music은 프로젝트 홍보를 위해 누구나 무료로 즐길 수 있게 만들었다.   
 본격적으로 내 삶의 마무리에 대해 생각하기 전에   
@@ -12,7 +12,7 @@ galpi_music은 프로젝트 홍보를 위해 누구나 무료로 즐길 수 있�
 ### "장례식에 흘러나올 내 인생의 주제곡은?"   
 을 타이틀로 무겁지 않지만 여운을 줄 수 있도록 만들었다.   
    
-후원시 제공되는 [심화 테스트](https://github.com/jeongkite/Galpi_Talk, "galpi_talk")도 함께 개발했다.    
+후원시 제공되는 [심화 테스트](https://github.com/jeongkite/Galpi_Talk)도 함께 개발했다.    
    
    ***
    
