@@ -25,7 +25,7 @@ def start(request):
 
     temp = str(this_mbti.pk + int(time.time()))
     encoded = temp.encode()
-    result = hashlib.sha256(encoded).hexdigest()
+    result = hashlib.sha256().hexdigest()
     this_mbti.hash_code = result
 
     this_mbti.save()
